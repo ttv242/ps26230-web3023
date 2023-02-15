@@ -435,6 +435,8 @@
     font-size: 16px;
     text-align: center;
     padding: 10px;
+    background-color: #ffffff;
+    margin: 0 4px;
 }
 
 .content__wrapper:hover .list__product__btn,
@@ -523,3 +525,10 @@
     width: 100%;
 }
 
+.product__box .btn_items {
+    background-color: #333333;
+    height: auto;
+    position: absolute;
+    top: 4.5rem;
+    margin-left: 10rem;
+}

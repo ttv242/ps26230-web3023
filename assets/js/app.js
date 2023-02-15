@@ -119,6 +119,19 @@ var j = products__arr.length-(products__arr.length-6);
 
 console.log(j);
 
+const handle__create__items = () => {
+    var product__box__All = document.querySelectorAll('.product__box');
+    var product__box = document.querySelector('.product__box');
+    console.log(product__box__All);
+    console.log(product__box);
+    product__box__All.forEach(product__box => { 
+        var btn_item = document.createElement('div');
+        btn_item.className = 'btn_items';
+        btn_item.innerText = 'hello';
+        product__box.appendChild(btn_item);
+    });
+}
+
 const handle__render__products = (i, j) => {
     var products__boxs = document.querySelectorAll('.product__box');
     products__boxs.forEach(product__box => product__box.remove());
@@ -146,29 +159,24 @@ const handle__render__products = (i, j) => {
         var price__product = document.createElement('p');
         price__product.className = 'price__product';
         product__box.appendChild(price__product);
-        price__product.innerText = productPrice;
-        
+        price__product.innerText = productPrice;    
     };
-
-    product__box.addEventListener('mouseup', function() {
-        alert('yes');
-    })
+    handle__create__items();
 };
 
 handle__render__products(i, j);
 
-// console.log(content__wrapper.children[1]);
-// var product__box__All = document.querySelectorAll('.product__box');
-// var product__box = document.querySelector('.product__box');
-// console.log(product__box__All);
-// console.log(product__box);
+// console.log(product__box__All.length);
+
+
+
+
 
 // product__box__All.forEach(function (div) {
 //     div.addEventListener('mouseover', function(event) {
 //         var event__target = event.target;
-//             var btn_item = document.createElement('div');
-//             btn_item.className = 'btn_item';
-//             btn_item.innerText = 'hello';
+//         console.log(event__target);
+//         console.log(product__box);
 //             event__target.appendChild(btn_item);
 //     });
 // });
