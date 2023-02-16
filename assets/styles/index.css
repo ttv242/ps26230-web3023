@@ -8,7 +8,7 @@
 
 .container {
     background-color: #F4F8FA;
-    height: 120rem;
+    height: 133rem;
 }
 
 .header {
@@ -575,4 +575,105 @@
 .btn_items > i:hover,
 .btn_items__pc > i:hover {
     transform: rotate(360deg);
+}
+
+.footer {
+    position: relative;
+    top: 43.5rem;
+    width: 1370px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 19px;
+    background-color: #F4F8FA;
+}
+
+
+
+.shop_page__wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 43px 0;
+}
+
+.shop_page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shop_page h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333333;
+    line-height: 22px;
+    margin-bottom: 39px;
+}
+
+.line {
+    width: 210px;
+    margin: auto;
+    border-bottom: 2px solid #000;
+    position: absolute;
+    top: 75px;
+    left: 585px;
+}
+
+.shop_page_box {
+    width: 320px;
+    margin: 0 .6rem;
+}
+
+.title_shop_page {
+    width: 100%;
+    background-color: #8D0B0B;
+    border-radius: 3px;
+    padding: 4px 0;
+}
+
+.numerical {
+    background-color: #505050;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    /* line-height: 27px; */
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.content_title_shop {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.content_title_shop i {
+    font-size: 8px;
+    position: relative;
+    top: -3px;
+}
+
+.content_shope_page {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 9px;
+}
+
+.content_shope_page * {
+    padding: 3px 0;
+}
+
+.location {
+    color: #222222;
+    font-weight: 700;
+    text-align: left;
+}
+
+.number_phone,
+.working_time {
+    color: #555555;
+    text-align: left;
 }
