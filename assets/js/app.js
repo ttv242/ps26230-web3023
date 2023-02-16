@@ -38,7 +38,7 @@ var content__wrapper = content__top__seller.children[0];
 
 // var content__wrapper = document.querySelector('.content__wrapper');
 
-console.log(content__wrapper);
+// console.log(content__wrapper);
 
 const products__arr = [
     {
@@ -117,13 +117,13 @@ const products__arr = [
 var i = 0;
 var j = products__arr.length-(products__arr.length-6);
 
-console.log(j);
+// console.log(j);
 
 const handle__create__items = () => {
     var product__box__All = document.querySelectorAll('.product__box');
     var product__box = document.querySelector('.product__box');
-    console.log(product__box__All);
-    console.log(product__box);
+    // console.log(product__box__All);
+    // console.log(product__box);
 
     product__box__All.forEach(product__box => { 
         var btn_item = document.createElement('div');
@@ -216,7 +216,7 @@ function prev__control() {
         i = i-1;
         j = j-1;
         handle__render__products(i, j);
-        console.log(i, j);
+        // console.log(i, j);
         return i, j;
     }
 };
@@ -226,13 +226,13 @@ function next__control() {
         i = i+1;
         j = j+1;
         handle__render__products(i, j);
-        console.log(i, j);
+        // console.log(i, j);
         return i, j;
     }
 };
 
 var main = document.querySelector('.main');
-console.log(main);
+// console.log(main);
 
 var office__pc = document.createElement('div');
 office__pc.className = 'office-pc';
@@ -341,7 +341,7 @@ const products__arr__pc = [
     }
 ];
 
-console.log(content__wrapper__pc);
+// console.log(content__wrapper__pc);
 
 var e = 0;
 var s = products__arr__pc.length-(products__arr__pc.length-6);
@@ -349,7 +349,7 @@ var s = products__arr__pc.length-(products__arr__pc.length-6);
 const handle__create__items__pc = () => {
     var product__box__pc__All = document.querySelectorAll('.product__box__pc');
     var product__box = document.querySelector('.product__box__pc');
-    console.log(product__box__pc__All);
+    // console.log(product__box__pc__All);
     // console.log(products__box__pc);
 
     product__box__pc__All.forEach(product__box => { 
@@ -433,6 +433,50 @@ next__control__btn__pc.addEventListener('click', function() {
     }
 });
 
+let list__cart = [];
+
+var btn_items = document.querySelectorAll('.btn_items');
+btn_items.forEach(function(i) {
+    i.children[3].addEventListener('click', function() {
+        var src__img = i.parentElement.children[0].src;
+        var productName = i.parentElement.children[1].innerHTML;
+        var productPrice = i.parentElement.children[2].innerHTML;
+        
+        localStorage.getItem('list__cart') ? [] : JSON.parse(localStorage.getItem('list__cart'));
+
+        list__cart.push({
+            image: src__img,
+            productName: productName,
+            productPrice: productPrice
+        });
+
+        localStorage.setItem('list__cart', JSON.stringify(list__cart));
+
+        render__count__cart();
+
+        console.log(list__cart.length);
+    });
+});
+
+
+var cart__btn = document.querySelector('.header-action__cart');
+console.log(cart__btn.children[1]);
+cart__btn.addEventListener('click', function() {
+    window.location = '/modules/cart.html';
+})
+
+const render__count__cart = () => {
+    // localStorage.getItem('list__cart') ? [] : JSON.parse(localStorage.getItem('list__cart'));
+    let a = JSON.parse(localStorage.getItem('list__cart'));
+    cart__btn.children[1].innerHTML = a.length;
+};
+
+render__count__cart();
 
 
 
+
+// console.log(localStorage.getItem('srcImg', src__img));
+// localStorage.setItem("lastname", "Vinh");
+// localStorage.removeItem('src__img');
+// localStorage.clear();
