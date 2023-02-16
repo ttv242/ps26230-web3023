@@ -8,10 +8,11 @@
 
 .container {
     background-color: #F4F8FA;
+    height: 120rem;
 }
 
 .header {
-
+    background-color: #F4F8FA;
 }
 
 .header-page__wrapper {
@@ -351,6 +352,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-top: 19px;
+    background-color: #F4F8FA;
 }
 
 .title {
@@ -508,14 +510,14 @@
     color: #d21212;
 }
 
-.top-seller {
-
+.top-seller .content {
+    margin-bottom: 19px;
 }
 
 .title i {
     position: absolute;
     left: 12.4rem;
-    top: 23.8rem;
+    top: 25rem;
     font-size: 3.2rem;
     color: #E02027;
 }
@@ -525,10 +527,35 @@
     width: 100%;
 }
 
-.product__box .btn_items {
-    background-color: #333333;
-    height: auto;
+.product__box:hover .btn_items {
+    display: block;
+    display: grid;
+    column-gap: 1rem;
     position: absolute;
-    top: 4.5rem;
-    margin-left: 10rem;
+    top: 4rem;
+    margin-left: 10.5rem;
+}
+
+.product__box .btn_items {
+    display: grid;
+    column-gap: 1rem;
+    position: absolute;
+    top: 4rem;
+    margin-left: 10.5rem;
+    display: none;
+    transition: all .3s linear;
+}
+
+.btn_items > i {
+    margin-top: 1rem;
+    border-radius: 100rem;
+    padding: .5rem;
+    background-color: rgb(34, 34, 34, 0.6);
+    font-size: 16px;
+    color: #ffffff;
+    transition: all .3s linear;
+}
+
+.btn_items > i:hover {
+    transform: rotate(360deg);
 }

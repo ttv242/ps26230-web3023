@@ -124,12 +124,39 @@ const handle__create__items = () => {
     var product__box = document.querySelector('.product__box');
     console.log(product__box__All);
     console.log(product__box);
+
     product__box__All.forEach(product__box => { 
         var btn_item = document.createElement('div');
         btn_item.className = 'btn_items';
-        btn_item.innerText = 'hello';
+
+        for (var i=0; i<4; i++) {
+            var btn_item_pd = document.createElement('i');
+            btn_item.appendChild(btn_item_pd);
+        }
+        
+        for (var i=0; i<4; i++) {
+            switch (i) {
+                case 0:
+                    btn_item.children[0].className = 'fa fa-compress';
+                case 1: 
+                    btn_item.children[1].className = 'fa fa-search-plus';
+                case 2:
+                    btn_item.children[2].className = 'fa fa-eye-slash';
+                case 3:
+                    btn_item.children[3].className = 'fa fa-shopping-bag';
+            }
+        }
+
         product__box.appendChild(btn_item);
+        // console.log(document.querySelectorAll(btn_item_pd.length));
+        // btn_item.className = 'fa fa-compress';
     });
+    // var btn_items = document.querySelectorAll('.btn_items');
+    // var btn_item = document.querySelector('.btn_items');
+    // btn_items.forEach(function(btn_item) {
+    // btn_item.children[0].className = 'fa fa-compress';
+    // })
+    // btn_item.children[0].className = 'fa fa-compress';
 }
 
 const handle__render__products = (i, j) => {
@@ -168,10 +195,6 @@ handle__render__products(i, j);
 
 // console.log(product__box__All.length);
 
-
-
-
-
 // product__box__All.forEach(function (div) {
 //     div.addEventListener('mouseover', function(event) {
 //         var event__target = event.target;
@@ -187,10 +210,6 @@ handle__render__products(i, j);
 //         event__target.remove(btn_item);
 //     });
 // });
-
-
-
-
 
 function prev__control() {
     if (j > 6) {
@@ -327,7 +346,37 @@ console.log(content__wrapper__pc);
 var e = 0;
 var s = products__arr__pc.length-(products__arr__pc.length-6);
 
+const handle__create__items__pc = () => {
+    var product__box__pc__All = document.querySelectorAll('.product__box__pc');
+    var product__box = document.querySelector('.product__box__pc');
+    console.log(product__box__pc__All);
+    console.log(product__box__pc);
 
+    product__box__pc__All.forEach(product__box => { 
+        var btn_item__pc = document.createElement('div');
+        btn_item__pc.className = 'btn_items__pc';
+
+        for (var i=0; i<4; i++) {
+            var btn_item_pd__pc = document.createElement('i');
+            btn_item.appendChild(btn_item_pd__pc);
+        }
+        
+        for (var i=0; i<4; i++) {
+            switch (i) {
+                case 0:
+                    btn_item__pc.children[0].className = 'fa fa-compress';
+                case 1: 
+                    btn_item__pc.children[1].className = 'fa fa-search-plus';
+                case 2:
+                    btn_item__pc.children[2].className = 'fa fa-eye-slash';
+                case 3:
+                    btn_item__pc.children[3].className = 'fa fa-shopping-bag';
+            }
+        }
+
+        product__box.appendChild(btn_item__pc);
+    });
+}
 
 const handle__render__products__pc = (e, s) => {
     var product__box__pc = document.querySelectorAll('.product__box__pc');
@@ -359,7 +408,7 @@ const handle__render__products__pc = (e, s) => {
         price__product.innerText = productPrice;
         
     };
-    return e, s;
+    handle__create__items__pc();
 };
 
 handle__render__products__pc(e, s);
