@@ -350,7 +350,7 @@ const handle__create__items__pc = () => {
     var product__box__pc__All = document.querySelectorAll('.product__box__pc');
     var product__box = document.querySelector('.product__box__pc');
     console.log(product__box__pc__All);
-    console.log(product__box__pc);
+    // console.log(products__box__pc);
 
     product__box__pc__All.forEach(product__box => { 
         var btn_item__pc = document.createElement('div');
@@ -358,7 +358,7 @@ const handle__create__items__pc = () => {
 
         for (var i=0; i<4; i++) {
             var btn_item_pd__pc = document.createElement('i');
-            btn_item.appendChild(btn_item_pd__pc);
+            btn_item__pc.appendChild(btn_item_pd__pc);
         }
         
         for (var i=0; i<4; i++) {
