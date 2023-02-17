@@ -1,6 +1,7 @@
 var imgSlide = document.querySelector('.img-slide');
 
 var arrImgSlides = [
+    "/assets/images/slide-header/sli-gigabyte_20d018074f30487f9fa8e89d3d6d8fe1_grande.webp",
     "/assets/images/slide-header/slide-header-1.webp",
     "/assets/images/slide-header/slide-header-2.webp",
     "/assets/images/slide-header/slide-header-3.webp",

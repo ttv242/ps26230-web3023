@@ -1,4 +1,4 @@
-const container = document.querySelector('#container');
+const main = document.querySelector('#main');
 let list__cart = JSON.parse(localStorage.getItem('list__cart'));
 
 
@@ -41,11 +41,13 @@ function render__list__cart() {
         delete__box.innerText = 'Xóa';
         cart__box.appendChild(delete__box)
 
-        container.append(cart__box);
+        main.append(cart__box);
 
     });
 }
+
 render__list__cart();
+
 var delete__box_All = document.querySelectorAll('.delete__box');
 var delete__box = document.querySelector('.delete__box');
 

@@ -4,11 +4,234 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/styles/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>Document</title>
 </head>
 <body>
 
-    <div id="container"></div>
+    <section id="container" class="container">
+        <section id="header" class="header">
+            <div class="header-page__wrapper">
+                <p>
+                    <img src="/assets/images/logo.webp" alt="Logo tin hoc ngoi sao">
+                </p>
+        
+                <div class="header-search">
+                    <input type="text" id="inputSearchAuto" placeholder="Bạn tìm gì…">
+                    <button class="insButton">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Tìm kiếm
+                    </button>
+                </div>
+        
+                <div class="header-action">
+                    <div class="header-action__account">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="text">
+                            <a href="">Đăng nhập/Đăng ký</a>
+                            <br>
+                            <a href="">
+                                Tài khoản
+                                <i class="fa-sharp fa-solid fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-action__cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                        Giỏ hàng
+                    </div>
+                </div>
+                <div class="nav-sidebar">
+                    <div class="nav-sidebar__head">
+                        <i class="fa-solid fa-bars"></i><span>DANH MỤC SẢN PHẨM</span>
+                    </div>
+
+                    <!-- <div class="nav-sidebar__dropdown">
+                        <ul>
+                            <li><a href=""><img src="/assets/images/icons/nav_1_icon.webp" alt=""> <span>Linh Kiện Mới</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_1_icon.webp" alt=""> <span>Linh Kiện Cũ</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_3_icon.webp" alt=""> <span>Laptop Chính Hãng</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_4_icon.webp" alt=""> <span>PC Gaming, Đồ Họa, Audio</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_5_icon.webp" alt=""> <span>PC Văn Phòng, Mini PC, AiO</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_6_icon.webp" alt=""> <span>Màn Hình Máy Tính</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_7_icon.webp" alt=""> <span>Phụ kiện</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_8_icon.webp" alt=""> <span>Bàn, Ghế Gaming</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_9_icon.webp" alt=""> <span>Phím, Chuột, Tai Nghe</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_10_icon.webp" alt=""> <span>Thiết bị mạng</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_11_icon.webp" alt=""> <span>Thiết Bị Âm Thanh</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_12_icon.webp" alt=""> <span>Phần Mềm</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_13_icon.webp" alt=""> <span>Camera, Thiết Bị Quan Sát</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_14_icon.webp" alt=""> <span>Máy In, mực in</span><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href=""><img src="/assets/images/icons/nav_15_icon.webp" alt=""> <span>Tản Nhiệt PC</span><i class="fa-solid fa-angle-right"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+
+                <div class="nav-navbar">
+                    <ul>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_1.webp" alt=""><span>Lắp đặt phòng net</span></a></li>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_2.webp" alt=""><span>Trả góp</span></a></li>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_3.webp" alt=""><span>Bảng giá</span></a></li>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_4.webp" alt=""><span>Xây dựng cấu hình</span></a></li>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_5.webp" alt=""><span>Kiểm tra bảo hành</span></a></li>
+                        <li><a href=""><img src="/assets/images/icons/icon_nav_6.webp" alt=""><span>Thiết bị mining</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="slider">
+                    <div class="slide-header">
+                        <img id="img-slide" class="img-slide" src="/assets/images/slide-header/slide-header-1.webp" alt="" >
+                        <div class="remote-slide">
+                            <i class="fa-solid fa-chevron-left" onclick="prev()"></i>
+                            <i class="fa-solid fa-chevron-right" onclick="next()"></i>
+                        </div>
+                    </div>
+
+                    <div class="banner-header">
+                        <img src="/assets/images/banner_right_1.webp" alt="">
+                        <img src="/assets/images/banner_right_2.webp" alt="">
+                        <img src="/assets/images/banner_right_2.webp" alt="">
+                    </div>
+                    
+                    <div class="banner-header-1">
+                        <img src="/assets/images/banner_right_1.webp" alt="">
+                        <img src="/assets/images/banner_right_2.webp" alt="">
+                    </div>
+                    
+                </div> -->
+            </div>
+        </section>
+    
+        <section id="main" class="main"></section>
+
+        <section id="footer" class="footer">
+            <div class="shop_page__wrapper">
+                <div class="shop_page">
+                    <h1>HỆ THỐNG SHOWROOM TIN HỌC NGÔI SAO</h1>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="shop_page_box">
+                        <div class="title_shop_page">
+                            <span class="numerical">1</span>
+    
+                            <span class="content_title_shop">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Showroom Tân Bình</span>
+                            </span>
+                        </div>
+                        
+                        <div class="content_shope_page">
+                            <p class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>28 - 30 Trần Triệu Luật, P.6, Quận Tân Bình, TP.HCM</span>
+                            </p>
+    
+                            <div class="number_phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>113</span>
+                            </div>
+    
+                            <p class="working_time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Thời gian làm việc: T2 - Chủ nhật, 08H30-21H00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shop_page_box">
+                        <div class="title_shop_page">
+                            <span class="numerical">1</span>
+    
+                            <span class="content_title_shop">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Showroom Tân Bình</span>
+                            </span>
+                        </div>
+                        
+                        <div class="content_shope_page">
+                            <p class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>28 - 30 Trần Triệu Luật, P.6, Quận Tân Bình, TP.HCM</span>
+                            </p>
+    
+                            <div class="number_phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>113</span>
+                            </div>
+    
+                            <p class="working_time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Thời gian làm việc: T2 - Chủ nhật, 08H30-21H00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shop_page_box">
+                        <div class="title_shop_page">
+                            <span class="numerical">1</span>
+    
+                            <span class="content_title_shop">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Showroom Tân Bình</span>
+                            </span>
+                        </div>
+                        
+                        <div class="content_shope_page">
+                            <p class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>28 - 30 Trần Triệu Luật, P.6, Quận Tân Bình, TP.HCM</span>
+                            </p>
+    
+                            <div class="number_phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>113</span>
+                            </div>
+    
+                            <p class="working_time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Thời gian làm việc: T2 - Chủ nhật, 08H30-21H00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shop_page_box">
+                        <div class="title_shop_page">
+                            <span class="numerical">1</span>
+    
+                            <span class="content_title_shop">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Showroom Tân Bình</span>
+                            </span>
+                        </div>
+                        
+                        <div class="content_shope_page">
+                            <p class="location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>28 - 30 Trần Triệu Luật, P.6, Quận Tân Bình, TP.HCM</span>
+                            </p>
+    
+                            <div class="number_phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>113</span>
+                            </div>
+    
+                            <p class="working_time">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Thời gian làm việc: T2 - Chủ nhật, 08H30-21H00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- <div id="container"></div> -->
 
     <script src="/assets/js/cart.js"></script>
 </body>
