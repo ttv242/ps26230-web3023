@@ -443,7 +443,17 @@
 
 .content__wrapper:hover .list__product__btn,
 .content__wrapper__pc:hover .list__product__btn__pc {
-    opacity: 1;
+    animation: list__product__btn 2.1s forwards;
+}
+
+@keyframes list__product__btn {
+    0% {
+        opacity: 0;
+        /* transform: translate(-15%); */
+    } 100% {
+        opacity: 1;
+        /* transform: translate(0%); */
+    }
 }
 
 .list__product__btn,
@@ -600,8 +610,6 @@
     margin-top: 19px;
     background-color: #F4F8FA;
 }
-
-
 
 .shop_page__wrapper {
     width: 100%;
