@@ -7,12 +7,10 @@
 }
 
 .container {
-    background-color: #F4F8FA;
-    height: 133rem;
+    height: 60rem;
 }
 
 .header {
-    background-color: #F4F8FA;
 }
 
 .header-page__wrapper {
@@ -346,34 +344,241 @@
 
 .main {
     position: relative;
-    top: 43.5rem;
+    top: 1rem;
     width: 1370px;
     margin: auto;
     font-size: 16px;
     line-height: 20px;
     margin-top: 19px;
-    background-color: #F4F8FA;
 }
 
+.title__cart {
+    text-align: left;
+}
 
+.title__cart p {
+    font-size: 24px;
+    color: #333333;
+    padding: 19px 0;
+}
 
+.content__cart {
+    text-align: center;
+    font-family: Arial;
+}
 
+.empty__cart {
+    width: 480px;
+    height: 233px;
+}
 
+.content__empty {
+    font-size: 24px;
+    color: #333333;
+    padding: 19px 0;
+}
 
+.btn_empty {
+    width: 250px;
+    height: 42px;
+    background-color: #e02027;
+    color: #ffffff;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: .3s linear;
+}
 
+.btn_empty:hover {
+    background-color: #ffffff;
+    color: #e02027;
+    border: 1px solid #e02027;
+    transition: .3s linear;
+}
 
+.header_list_cart {
+    width: 903px;
+    color: #333333;
+    font-size: 16px;
+    margin: 10px 0 15px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
 
+.cart__product {
+    width: 100px;
+}
 
+.cart__productName {
+    width: 200px;
+}
 
+.cart__productPrice {
+    width: 120px;
+}
 
+.cart__productAmount {
+    width: 120px;
+}
 
+.cart__productTotal {
+    width: 120px;
+}
 
+.cart__productRemove {
+    width: 50px;
+    margin-right: -20px;
+}
 
+.cart__box {
+    width: 903px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #000;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+}
 
+.cart__box:last-child {
+    border: none;
+}
+
+.cart__box * {
+    text-align: left;
+}
+
+.image__cart {
+    width: 100px;
+    height: 100px;
+}
+
+.productName {
+    width: 200px;
+}
+
+.productPrice {
+    width: 120px;
+    margin-right: -10px;
+    color: #666666;
+    font-size: 20px;
+}
+
+.productAmount {
+    width: 50px;
+    height: 30px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.productTotal {
+    width: 120px;
+    color: #666666;
+    font-size: 20px;
+    margin-right: -30px;
+}
+
+.delete__box {
+    width: 45px;
+    height: 25px;
+    margin-right: 15px;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    transition: .3s linear;
+}
+
+.delete__box:hover {
+    font-size: 24px;
+    animation: delete__box__animation .75s ease-in-out;
+}
+
+@keyframes delete__box__animation {
+    0% {
+        transform: rotate(45deg);
+    } 25% {
+        transform: rotate(-45deg);
+    } 50% {
+        transform: rotate(45deg);
+    } 75% {
+        transform: rotate(-45deg);
+    } 100% {
+        transform: rotate(0deg);
+    }
+}
+
+.option__box__cart {
+    width: 440px;
+    height: 230px;
+    position: absolute;
+    right: 0;
+}
+
+.top__option__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+
+.top__option__box * {
+    color:#333333;
+    font-family:Arial;
+    font-size:14px;
+    line-height:24px;
+    margin:0px 0px 15px;
+    text-align:right;
+    font-size: 16px;
+}
+
+.value__total {
+    font-size: 24px;
+}
+
+.bottom__option__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comeback,
+.checkout {
+    width: 205px;
+    height: 45px;
+    border-radius:50px;
+    font-family:Arial;
+    font-size:14px;
+    line-height:20px;
+    margin:0px 8.725px 0px 0px;
+    padding:10px 0px;
+    text-align:center;
+    text-transform:uppercase;
+    border: 1px solid #e02027;
+    transition: .3s linear;
+}
+
+.comeback {
+    background-color:#e02027;
+    color:#ffffff;
+}
+
+.comeback:hover {
+    background-color:#ffffff;
+    color:#e02027;
+    transition: .3s linear;
+}
+
+.checkout {
+    background-color:#ffffff;
+    color:#e02027;
+}
 
 .footer {
     position: relative;
-    top: 43.5rem;
+    top: 50px;
     width: 1370px;
     margin: auto;
     font-size: 16px;

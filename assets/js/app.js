@@ -464,7 +464,19 @@ var cart__btn = document.querySelector('.header-action__cart');
 console.log(cart__btn.children[1]);
 cart__btn.addEventListener('click', function() {
     window.location = '/modules/cart.html';
+});
+
+
+cart__btn.addEventListener('mousedown', function() {
+cart__btn.style = 'color: red';
 })
+
+
+
+cart__btn.addEventListener('mouseup', function() {
+cart__btn.style = 'color: #ffffff';
+})
+
 
 const render__count__cart = () => {
     // localStorage.getItem('list__cart') ? [] : JSON.parse(localStorage.getItem('list__cart'));
@@ -474,10 +486,18 @@ const render__count__cart = () => {
 
 render__count__cart();
 
+console.log(btn_items);
+var option__items = document.querySelectorAll('.btn_items > i');
+var option__item = document.querySelector('.btn_items > i');
 
+option__items.forEach(function(option__item) {
+    option__item.addEventListener('mousedown', function() {
+        option__item.style = 'color: red';
+    })
+});
 
-
-// console.log(localStorage.getItem('srcImg', src__img));
-// localStorage.setItem("lastname", "Vinh");
-// localStorage.removeItem('src__img');
-// localStorage.clear();
+option__items.forEach(function(option__item) {
+    option__item.addEventListener('mouseup', function() {
+        option__item.style = 'color: #ffffff';
+    })
+});
