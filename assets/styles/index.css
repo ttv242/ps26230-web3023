@@ -852,13 +852,15 @@
     }
 
     .content__wrapper, .content__wrapper__pc {
-        flex-wrap: wrap;
+        flex-wrap: wrap;   
+        padding: 0 25px;
     }
 
     .product__box,
     .product__box__pc {
         width: 85px;
         height: 175px;
+        margin-bottom: 9px;
     }
 
     .product__img {
@@ -920,7 +922,7 @@
 
     .footer {
         position: relative;
-        top: 0rem;
+        top: 17rem;
         width: 100%;
     }
 
